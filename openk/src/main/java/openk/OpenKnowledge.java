@@ -1,5 +1,4 @@
 package openk;
-
 import dao.Connexion;
 
 public class OpenKnowledge {

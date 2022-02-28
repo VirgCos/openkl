@@ -10,17 +10,20 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class Connexion {
 
-	private static final String BASE_DE_DONNES = "openkl";
+//	private static final String BASE_DE_DONNES = "openkl";
+	private static final String BASE_DE_DONNES = "BD_OpenKL";
 
-
-	private static final String SQL_SERVER = "localhost\\SQLEXPRESS01";
-
+//	private static final String SQL_SERVER = "localhost\\SQLEXPRESS01";
+	private static final String SQL_SERVER = "localhost\\MSSQLSERVER";
 	private static Connection connect = null;
 
 	
-	private static final String ID = "virg.C";
-	private static final String MDP = "tata";
-
+//	private static final String ID = "virg.C";
+//	private static final String MDP = "tata";
+	private static final String ID = "admin";
+	private static final String MDP = "admin";
+	
+	
 	/**
 	 * Patron de conception Singleton
 	 * @return l'instance unique de connexion
