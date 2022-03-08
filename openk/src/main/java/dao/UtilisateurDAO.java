@@ -29,6 +29,7 @@ public class UtilisateurDAO {
 	
 	private UtilisateurDAO() {
 		super();
+		read(1);
 	}
 
 	
@@ -57,8 +58,39 @@ public class UtilisateurDAO {
 	//e.printStackTrace();
 	}
 	//}
-	return Utilisateur;
+	System.out.println(utilisateur);
+	return utilisateur;
 	}
 
+	public Utilisateur readAll() {
+		
+		Utilisateur utilisateur = null;
+		/*if (donnees.containsKey(id)) {
+		System.out.println("récupéré");
+		utilisateur=donnees.get(id);
+		}
+		else {*/
+		System.out.println("recherché dans la BD");
+		try {
+
+		String requete = "SELECT * FROM "+TABLE;
+		ResultSet rs = Connexion.executeQuery(requete);
+		rs.next();
+		int id = rs.getInt(CLE_PRIMAIRE);
+		String Nom = rs.getString(NOM);
+		String Prenom = rs.getString(PRENOM);
+		String Email = rs.getString(EMAIL);
+		String Telephone = rs.getString(TELEPHONE);
+		String Type = rs.getString(TYPE);
+		utilisateur = new Utilisateur (id, Nom, Prenom, Email, Telephone, Type);
+		//donnees.put(id, utilisateur);
+		} catch (SQLException e) {
+		//e.printStackTrace();
+		}
+		//}
+		System.out.println(utilisateur);
+		return utilisateur;
+		}
+	}
 	
-}
+	

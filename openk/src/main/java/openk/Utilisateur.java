@@ -72,7 +72,7 @@ public class Utilisateur {
 	
 	
 	public String toString() {
-		return "Avion [id=" + user_id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", telephone=" + email +", telephone=" + telephone + ", type=" + type +"]";
+		return "Utilisateur [id=" + user_id + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", telephone=" + email +", telephone=" + telephone + ", type=" + type +"]";
 	}
 
 }
