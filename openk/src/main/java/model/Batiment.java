@@ -1,4 +1,4 @@
-package openk;
+package model;
 
 public class Batiment {
 	private int idBatiment;

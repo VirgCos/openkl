@@ -1,4 +1,4 @@
-package openk;
+package model;
 
 public class CompoFormation {
 	private Formation formation;
