@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="468.0" style="-fx-background-color: ORANGE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.bd.AvionIhmControl">
+   <children>
+      <SplitPane prefHeight="236.0" prefWidth="200.0" style="-fx-background-color: #F5F5DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="539.0">
+               <children>
+                  <Label fx:id="texteTest" layoutX="6.0" layoutY="4.0" prefHeight="35.0" prefWidth="245.0" text="OPEN KNOWLEDGE" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="2.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="222.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: GREY;" text="S'inscrire">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="26.0" layoutY="150.0" text="Adresse mail">
+                     <font>
+                        <Font name="Candara" size="12.0" />
+                     </font></Label>
+                  <Label layoutX="26.0" layoutY="178.0" text="Mot de passe">
+                     <font>
+                        <Font name="Candara" size="12.0" />
+                     </font></Label>
+                  <TextField layoutX="188.0" layoutY="146.0" />
+                  <PasswordField layoutX="188.0" layoutY="174.0" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Connexion">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="227.0" mnemonicParsing="false" style="-fx-background-color: GREY;" text="Se connecter">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="33.0" layoutY="332.0" text="Pas encore inscrit ?">
+                     <font>
+                        <Font name="Candara" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="2.0" top="2.0" />
+               </padding>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

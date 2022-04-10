@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.bd.AvionIhmControl">
+   <children>
+      <SplitPane prefHeight="236.0" prefWidth="200.0" style="-fx-background-color: #F5F5DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="539.0">
+               <children>
+                  <Label fx:id="texteTest" layoutX="6.0" layoutY="4.0" prefHeight="35.0" prefWidth="245.0" text="INSCRIPTION" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="2.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <Button layoutX="338.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: GREY;" text="S'inscrire">
+                     <font>
+                        <Font name="Candara Bold" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="11.0" layoutY="53.0" text="Nom" />
+                  <Label layoutX="11.0" layoutY="88.0" text="Prénom" />
+                  <Label layoutX="10.0" layoutY="125.0" text="Adresse mail" />
+                  <TextField layoutX="235.0" layoutY="48.0" />
+                  <TextField layoutX="235.0" layoutY="84.0" />
+                  <TextField layoutX="235.0" layoutY="121.0" />
+                  <CheckBox layoutX="24.0" layoutY="325.0" mnemonicParsing="false" text="Bac" />
+                  <Label layoutX="20.0" layoutY="299.0" text="Niveau d'études">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <CheckBox layoutX="85.0" layoutY="325.0" mnemonicParsing="false" text="Bac +1" />
+                  <CheckBox layoutX="162.0" layoutY="324.0" mnemonicParsing="false" text="Bac +2" />
+                  <CheckBox layoutX="240.0" layoutY="324.0" mnemonicParsing="false" text="Bac +3" />
+                  <Label layoutX="25.0" layoutY="381.0" text="Choix de la formation">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <MenuButton layoutX="201.0" layoutY="378.0" mnemonicParsing="false" text="Formation">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                        <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </MenuButton>
+                  <Label layoutX="9.0" layoutY="164.0" text="Confirmation adresse mail" />
+                  <Label layoutX="8.0" layoutY="201.0" text="Mot de passe" />
+                  <Label layoutX="6.0" layoutY="239.0" text="Confirmation mot de passe" />
+                  <TextField layoutX="235.0" layoutY="160.0" />
+                  <TextField layoutX="235.0" layoutY="197.0" />
+                  <TextField layoutX="235.0" layoutY="235.0" />
+                  <CheckBox layoutX="323.0" layoutY="325.0" mnemonicParsing="false" text="Autre" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="2.0" top="2.0" />
+               </padding>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
