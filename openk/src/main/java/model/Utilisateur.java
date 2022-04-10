@@ -1,4 +1,4 @@
-package openk;
+package model;
 public class Utilisateur {
 	public int idUtilisateur;
 	public String nom;

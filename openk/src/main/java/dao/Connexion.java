@@ -10,7 +10,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 public class Connexion {
 
-	private static final String BASE_DE_DONNES = "openkl";
+	private static final String BASE_DE_DONNES = "BD_OpenKL";
 
 
 	private static final String SQL_SERVER = "localhost\\SQLEXPRESS01";

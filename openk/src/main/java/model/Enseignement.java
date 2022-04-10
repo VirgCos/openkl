@@ -1,4 +1,4 @@
-package openk;
+package model;
 
 public class Enseignement {
 	private Formateur formateur;

@@ -1,4 +1,4 @@
-package openk;
+package model;
 
 import java.time.LocalDateTime;
 
