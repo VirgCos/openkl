@@ -1,4 +1,4 @@
-package model;
+package openk.model;
 
 public class Apprenant {
 	private int user_id;

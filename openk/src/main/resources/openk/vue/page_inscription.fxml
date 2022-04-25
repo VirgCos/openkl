@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.bd.AvionIhmControl">
+<AnchorPane prefHeight="500.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="openk.vue.AccueilController">
    <children>
       <SplitPane prefHeight="236.0" prefWidth="200.0" style="-fx-background-color: #F5F5DC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -17,7 +17,7 @@
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font></Label>
-                  <Button layoutX="338.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: GREY;" text="S'inscrire">
+                  <Button layoutX="338.0" layoutY="431.0" mnemonicParsing="false" onAction="#afficherInscription" style="-fx-background-color: GREY;" text="S'inscrire">
                      <font>
                         <Font name="Candara Bold" size="18.0" />
                      </font></Button>

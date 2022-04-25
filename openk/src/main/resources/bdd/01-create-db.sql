@@ -1,4 +1,20 @@
-USE [BD_OpenKL]
+sp_configure 'contained database authentication', 1;  
+GO  
+RECONFIGURE;  
+GO
+
+use master
+GO
+CREATE LOGIN jury WITH PASSWORD = 'test', DEFAULT_DATABASE = master
+GO
+CREATE DATABASE BD_OpenKL CONTAINMENT = PARTIAL
+GO
+
+use BD_OpenKL
+GO
+create user jury from login jury with default_schema = dbo
+GO
+EXEC sp_addrolemember 'db_owner', 'jury'
 GO
 
 SET ANSI_NULLS ON
@@ -20,6 +36,9 @@ CREATE TABLE [dbo].[Batiment](
 ) ON [PRIMARY]
 GO
 
+GRANT ALL ON [dbo].[Batiment] TO jury
+GO
+
 /****** Object:  Table [dbo].[Utilisateur]    Script Date: 10/04/2022 16:58:42 ******/
 CREATE TABLE [dbo].[Utilisateur](
 	[Id_Utilisateur] [int] IDENTITY(1,1) NOT NULL,
@@ -29,11 +48,15 @@ CREATE TABLE [dbo].[Utilisateur](
 	[Telephone] [nchar](10) NULL,
 	[Type] [nvarchar](50) NOT NULL,
 	[Niveau_etudes] [int] NULL,
+	[mdp] [nvarchar](255)
  CONSTRAINT [PK_Utilisateur] PRIMARY KEY CLUSTERED 
 (
 	[Id_Utilisateur] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+
+GRANT ALL ON [dbo].[Utilisateur] TO jury
 GO
 
 /****** Object:  Table [dbo].[Apprenant]    Script Date: 10/04/2022 16:50:00 ******/
@@ -53,6 +76,9 @@ GO
 ALTER TABLE [dbo].[Apprenant] CHECK CONSTRAINT [FK_Apprenant_Utilisateur]
 GO
 
+GRANT ALL ON [dbo].[Apprenant] TO jury
+GO
+
 /****** Object:  Table [dbo].[Formation]    Script Date: 10/04/2022 16:58:01 ******/
 CREATE TABLE [dbo].[Formation](
 	[Id_Formation] [int] IDENTITY(1,1) NOT NULL,
@@ -63,6 +89,9 @@ CREATE TABLE [dbo].[Formation](
 	[Id_Formation] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+
+GRANT ALL ON [dbo].[Formation] TO jury
 GO
 
 /****** Object:  Table [dbo].[Promotion]    Script Date: 10/04/2022 16:58:26 ******/
@@ -83,6 +112,9 @@ REFERENCES [dbo].[Formation] ([Id_Formation])
 GO
 
 ALTER TABLE [dbo].[Promotion] CHECK CONSTRAINT [FK_Promotion_Formation]
+GO
+
+GRANT ALL ON [dbo].[Promotion] TO jury
 GO
 
 /****** Object:  Table [dbo].[Appartenance]    Script Date: 10/04/2022 16:49:51 ******/
@@ -111,6 +143,9 @@ GO
 ALTER TABLE [dbo].[Appartenance] CHECK CONSTRAINT [FK_Appartenance_Promo]
 GO
 
+GRANT ALL ON [dbo].[Appartenance] TO jury
+GO
+
 /****** Object:  Table [dbo].[Formateur]    Script Date: 10/04/2022 16:52:09 ******/
 CREATE TABLE [dbo].[Formateur](
 	[Id_Utilisateur] [int] NOT NULL,
@@ -128,6 +163,9 @@ GO
 ALTER TABLE [dbo].[Formateur] CHECK CONSTRAINT [FK_Formateur_Utilisateur]
 GO
 
+GRANT ALL ON [dbo].[Formateur] TO jury
+GO
+
 /****** Object:  Table [dbo].[Matiere]    Script Date: 10/04/2022 16:58:20 ******/
 CREATE TABLE [dbo].[Matiere](
 	[Id_Matiere] [int] IDENTITY(1,1) NOT NULL,
@@ -137,6 +175,9 @@ CREATE TABLE [dbo].[Matiere](
 	[Id_Matiere] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+
+GRANT ALL ON [dbo].[Matiere] TO jury
 GO
 
 /****** Object:  Table [dbo].[Enseignement]    Script Date: 10/04/2022 16:52:02 ******/
@@ -165,6 +206,9 @@ GO
 ALTER TABLE [dbo].[Enseignement] CHECK CONSTRAINT [FK_Enseignement_Matiere1]
 GO
 
+GRANT ALL ON [dbo].[Enseignement] TO jury
+GO
+
 /****** Object:  Table [dbo].[Compo_Formation]    Script Date: 10/04/2022 16:50:13 ******/
 CREATE TABLE [dbo].[Compo_Formation](
 	[Id_Formation] [int] NOT NULL,
@@ -189,6 +233,9 @@ REFERENCES [dbo].[Matiere] ([Id_Matiere])
 GO
 
 ALTER TABLE [dbo].[Compo_Formation] CHECK CONSTRAINT [FK_Compo_Formation_Mat]
+GO
+
+GRANT ALL ON [dbo].[Compo_Formation] TO jury
 GO
 
 /****** Object:  Table [dbo].[Cours]    Script Date: 10/04/2022 16:51:57 ******/
@@ -227,6 +274,9 @@ GO
 ALTER TABLE [dbo].[Cours] CHECK CONSTRAINT [FK_Cours_Promo]
 GO
 
+GRANT ALL ON [dbo].[Cours] TO jury
+GO
+
 /****** Object:  Table [dbo].[Salle]    Script Date: 10/04/2022 16:58:32 ******/
 CREATE TABLE [dbo].[Salle](
 	[Id_Salle] [int] IDENTITY(1,1) NOT NULL,
@@ -255,18 +305,16 @@ GO
 ALTER TABLE [dbo].[Salle] CHECK CONSTRAINT [FK_Salle_Salle]
 GO
 
+GRANT ALL ON [dbo].[Salle] TO jury
+GO
+
 /****** Object:  Table [dbo].[Seance]    Script Date: 10/04/2022 16:58:37 ******/
 CREATE TABLE [dbo].[Seance](
 	[dateDeb_Seance] [datetime] NULL,
 	[dateFin_Seance] [datetime] NULL,
 	[Id_Cours] [int] NOT NULL,
-	[Id_Salle] [int] NOT NULL,
- CONSTRAINT [PK_Seance] PRIMARY KEY CLUSTERED 
-(
-	[Id_Cours] ASC,
-	[Id_Salle] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
+	[Id_Salle] [int] NOT NULL
+)
 GO
 
 ALTER TABLE [dbo].[Seance]  WITH CHECK ADD  CONSTRAINT [FK_Seance_Cours] FOREIGN KEY([Id_Cours])
@@ -281,4 +329,7 @@ REFERENCES [dbo].[Salle] ([Id_Salle])
 GO
 
 ALTER TABLE [dbo].[Seance] CHECK CONSTRAINT [FK_Seance_Salle]
+GO
+
+GRANT ALL ON [dbo].[Seance] TO jury
 GO

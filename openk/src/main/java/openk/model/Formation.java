@@ -1,4 +1,4 @@
-package model;
+package openk.model;
 
 public class Formation {
 	private int idFormation;

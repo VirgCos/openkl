@@ -1,4 +1,4 @@
-package dao;
+package openk.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,15 +12,15 @@ public class Connexion {
 
 	private static final String BASE_DE_DONNES = "BD_OpenKL";
 //	private static final String BASE_DE_DONNES = "openkl";
-	private static final String SQL_SERVER = "localhost\\SQLEXPRESS01";
+	private static final String SQL_SERVER = "localhost\\SQLEXPRESS";
 //	private static final String SQL_SERVER = "localhost\\MSSQLSERVER";
 	private static Connection connect = null;
 
 	
 //	private static final String ID = "virg.C";
 //	private static final String MDP = "tata";
-	private static final String ID = "admin";
-	private static final String MDP = "admin";
+	private static final String ID = "jury";
+	private static final String MDP = "test";
 	
 	
 	/**
@@ -30,17 +30,18 @@ public class Connexion {
 	public static Connection getInstance() {
 		if (connect==null) {
 			try { 
-
 				SQLServerDataSource ds = new SQLServerDataSource();
 				ds.setUser(ID);
 				ds.setPassword(MDP);
 				ds.setServerName(SQL_SERVER);
 				ds.setDatabaseName(BASE_DE_DONNES);
 				connect = ds.getConnection();
+				//connect = DriverManager.getConnection("jdbc:h2:mem:BD_OpenKL;DB_CLOSE_DELAY=-1");
 				System.out.println("connecté");
 			}
 			catch (SQLException e){
-				System.out.println("Echec de la tentative de connexion : " + e.getMessage() + e.getStackTrace()) ;
+				System.out.println("Echec de la tentative de connexion : " + e.getMessage());
+				e.printStackTrace();
 			}
 		}
 		return connect;
