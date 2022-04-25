@@ -6,7 +6,7 @@
   <properties>
 	    <maven.compiler.source>11</maven.compiler.source>
 	    <maven.compiler.target>11</maven.compiler.target>
-  		<javafx.version>8.0</javafx.version>
+  		<javafx.version>17.0.1</javafx.version>
   	</properties>
   
   	<dependencies>
@@ -18,7 +18,50 @@
 		<dependency>
 		    <groupId>org.openjfx</groupId>
 		    <artifactId>javafx-controls</artifactId>
-		    <version>17.0.1</version>
+		    <version>${javafx.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-fxml</artifactId>
+		    <version>${javafx.version}</version>
 		</dependency>
   	</dependencies>
+
+	<build>
+		<plugins>
+		    <plugin>
+		        <groupId>org.openjfx</groupId>
+		        <artifactId>javafx-maven-plugin</artifactId>
+		        <version>0.0.8</version>
+		        <configuration>
+		            <mainClass>openk.OpenKnowledge</mainClass>
+		        </configuration>
+		    </plugin>
+		    <plugin>
+		    	<groupId>org.apache.maven.plugins</groupId>
+		    	<artifactId>maven-jar-plugin</artifactId>
+		    	<version>3.0.2</version>
+		    	<configuration>
+		    		<archive>
+		    			<manifestEntries>
+							<JavaFX-Version>${javafx.version}+</JavaFX-Version>
+							<Main-Class>openk.OpenKnowledge</Main-Class>
+							<implementation-version>1.0</implementation-version>
+							<JavaFX-Application-Class>openk.OpenKnowledge</JavaFX-Application-Class>
+							<!-- 
+							<JavaFX-Class-Path>
+								myDep1.jar myDep2.jar
+							</JavaFX-Class-Path>
+							 -->
+							<!-- The artifactId (name) of the jfxrt.jar ... see dependency system scope--> 
+							<Class-Path>javafx-${javafx.version}.jar</Class-Path>
+		    			</manifestEntries>
+		    			<manifest>
+		    				<addClasspath>true</addClasspath>
+		    			</manifest>
+		    		</archive>
+		    	</configuration>
+		    </plugin>
+		</plugins>
+	</build>
 </project>

@@ -1,10 +1,10 @@
 USE [BD_OpenKL]
 GO
 
-INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES (25, 'rue Emile Combes', 35000, 'RENNES');
-INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES (41, 'boulevard du Colombier', 35000, 'RENNES');
-INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES (52, 'avenue Andr√© Bonnin', 35135, 'CHANTEPIE');
-INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES (84, 'avenue de Caradeuc', 35510, 'CESSON SEVIGNE');
+INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES ('25 rue Emile Combes', 35000, 'RENNES');
+INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES ('41 boulevard du Colombier', 35000, 'RENNES');
+INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES ('52 avenue Andr√© Bonnin', 35135, 'CHANTEPIE');
+INSERT INTO [dbo].[Batiment] ([Adresse],[CP],[Ville]) VALUES ('84 avenue de Caradeuc', 35510, 'CESSON SEVIGNE');
 GO
 
 INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Niveau_etudes]) VALUES ('BALLUT', 'Gael', 'g.ballut@yopmail.com', '0652867409', 'Administratif', 3);
@@ -61,6 +61,7 @@ INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Nive
 INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Niveau_etudes]) VALUES ('LE GOURIOU', 'Aymeric', 'a.legouriou@yopmail.com', '0633121214', 'Apprenant', 2);
 INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Niveau_etudes]) VALUES ('AMBRY', 'Laura', 'l.ambry@yopmail.com', '0699142580', 'Apprenant', 2);
 INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Niveau_etudes]) VALUES ('BRIAC', 'Damien', 'd.briac@yopmail.com', '0608469122', 'Apprenant', 2);
+INSERT INTO [dbo].[Utilisateur] ([Nom],[Prenom],[Email],[Telephone],[Type],[Niveau_etudes]) VALUES ('LELOUET', 'Claude', 'c.lelouet@yopmail.com', '0608469125', 'Apprenant', 3);
 GO
 
 INSERT INTO [dbo].[Apprenant]([Id_Utilisateur]) VALUES (25);
@@ -97,42 +98,41 @@ INSERT INTO [dbo].[Apprenant]([Id_Utilisateur]) VALUES (55);
 GO
 
 INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Communication', 'Diplome');
-INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Comptabilit√©', 'Diplome');
+INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('ComptabilitÈ', 'Diplome');
 INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Informatique', 'Diplome');
-INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Informatique d√©butant', 'Certification');
+INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Informatique dÈbutant', 'Certification');
 INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Chinois', 'Certification');
 INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Italien', 'Certification');
-INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Secr√©tariat', 'Diplome');
+INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('SecrÈtariat', 'Diplome');
 INSERT INTO [dbo].[Formation] ([Denomination],[Certif_ou_Diplome]) VALUES ('Marketing', 'Certification');
 GO
 
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 1);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 2);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 3);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 4);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 5);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 6);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 7);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2020-09-01 09:00:00.000', '2021-06-30 16:30:00.000', 8);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-09-01 09:00:00.000', '2022-06-30 16:30:00.000', 1);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-09-01 09:00:00.000', '2022-06-30 16:30:00.000', 2);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 3);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 4);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 5);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 6);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 7);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2021-06-30 16:30:00.000', '2022-06-30 16:30:00.000', 8);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 1);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 2);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 3);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 4);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 5);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 6);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 7);
-INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES ('2022-06-30 16:30:00.000', '2023-06-30 16:30:00.000', 8);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 1);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 2);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 3);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 4);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 5);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 6);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 7);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2020-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), 8);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 1);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-09-01 09:00:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 2);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 3);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 4);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 5);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 6);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 7);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2021-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), 8);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 1);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 2);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 3);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 4);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 5);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 6);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 7);
+INSERT INTO [dbo].[Promotion] ([dateDeb],[dateFin],[Id_Formation]) VALUES (CONVERT(DATETIME, '2022-06-30 16:30:00.000', 102), CONVERT(DATETIME, '2023-06-30 16:30:00.000', 102), 8);
 GO
 
-INSERT INTO [dbo].[Appartenance] ([Id_Promotion],[Id_Apprenant]) VALUES (,);
 INSERT INTO [dbo].[Appartenance] ([Id_Promotion],[Id_Apprenant]) VALUES (1,25);
 INSERT INTO [dbo].[Appartenance] ([Id_Promotion],[Id_Apprenant]) VALUES (1,26);
 INSERT INTO [dbo].[Appartenance] ([Id_Promotion],[Id_Apprenant]) VALUES (1,27);
@@ -211,29 +211,28 @@ INSERT INTO [dbo].[Formateur] ([Id_Utilisateur]) VALUES (23);
 INSERT INTO [dbo].[Formateur] ([Id_Utilisateur]) VALUES (24);
 GO
 
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Id_Matiere', 'Denomination');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Math√©matiques');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Fran√ßais');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('MathÈmatiques');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('FranÁais');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Anglais');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Histoire');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Management');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Economie entreprise');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Droit g√©n√©ral');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Economie g√©n√©rale');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Droit gÈnÈral');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Economie gÈnÈrale');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Droit informatique');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Gestion comptable');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Communication');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('SISR');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Algorithmie');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Projet professionnel');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Math√©matiques appliqu√©es');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('MathÈmatiques appliquÈes');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Allemand');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Espagnol');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Italien');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Chinois');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('SLAM');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Informatique d√©butant');
-INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Cybers√©curit√©');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Informatique dÈbutant');
+INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('CybersÈcuritÈ');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Gestion administrative');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Marketing');
 INSERT INTO [dbo].[Matiere] ([Denomination]) VALUES ('Web');
@@ -331,6 +330,14 @@ INSERT INTO [dbo].[Salle] ([Batiment],[Denomination],[EquipementVirtuel],[NbPlac
 INSERT INTO [dbo].[Salle] ([Batiment],[Denomination],[EquipementVirtuel],[NbPlaces]) VALUES (4, '2044', 'Non', 10);
 GO
 
---INSERT INTO [dbo].[Seance] ([dateDeb_Seance],[dateFin_Seance],[Id_Cours],[Id_Salle]) VALUES ('','',,);
---GO
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 1, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 11:00:00', 102), CONVERT(DATETIME, '2022-04-18 12:30:00', 102), 2, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 13:30:00', 102), CONVERT(DATETIME, '2022-04-18 15:00:00', 102), 3, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 15:10:00', 102), CONVERT(DATETIME, '2022-04-18 17:30:00', 102), 4, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 11:00:00', 102), CONVERT(DATETIME, '2022-04-19 12:30:00', 102), 2, 2);
+GO
+
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 3, 1, 4);
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 5, 1, 5);
+GO
 

@@ -1,9 +1,9 @@
-package dao;
+package openk.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import model.Apprenant;
+import openk.model.Apprenant;
 
 public class ApprenantDAO {
 	private static final String TABLE = "Apprenant";

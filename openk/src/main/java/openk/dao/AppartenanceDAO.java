@@ -1,4 +1,4 @@
-package dao;
+package openk.dao;
 
 public class AppartenanceDAO {
 
