@@ -334,10 +334,42 @@ insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) valu
 insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 11:00:00', 102), CONVERT(DATETIME, '2022-04-18 12:30:00', 102), 2, 2);
 insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 13:30:00', 102), CONVERT(DATETIME, '2022-04-18 15:00:00', 102), 3, 1);
 insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-18 15:10:00', 102), CONVERT(DATETIME, '2022-04-18 17:30:00', 102), 4, 2);
-insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 11:00:00', 102), CONVERT(DATETIME, '2022-04-19 12:30:00', 102), 2, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 09:30:00', 102), CONVERT(DATETIME, '2022-04-19 11:00:00', 102), 2, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 11:00:00', 102), CONVERT(DATETIME, '2022-04-19 12:30:00', 102), 20, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 13:30:00', 102), CONVERT(DATETIME, '2022-04-19 15:00:00', 102), 4, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-19 15:10:00', 102), CONVERT(DATETIME, '2022-04-19 17:30:00', 102), 13, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-20 09:30:00', 102), CONVERT(DATETIME, '2022-04-20 11:00:00', 102), 7, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-20 11:00:00', 102), CONVERT(DATETIME, '2022-04-20 12:30:00', 102), 1, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-20 13:30:00', 102), CONVERT(DATETIME, '2022-04-20 15:00:00', 102), 12, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-20 15:10:00', 102), CONVERT(DATETIME, '2022-04-20 17:30:00', 102), 12, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-21 09:30:00', 102), CONVERT(DATETIME, '2022-04-21 11:00:00', 102), 7, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-21 11:00:00', 102), CONVERT(DATETIME, '2022-04-21 12:30:00', 102), 15, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-21 13:30:00', 102), CONVERT(DATETIME, '2022-04-21 15:00:00', 102), 20, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-21 15:10:00', 102), CONVERT(DATETIME, '2022-04-21 17:30:00', 102), 11, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-22 09:30:00', 102), CONVERT(DATETIME, '2022-04-22 11:00:00', 102), 3, 2);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-22 11:00:00', 102), CONVERT(DATETIME, '2022-04-22 12:30:00', 102), 15, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-22 13:30:00', 102), CONVERT(DATETIME, '2022-04-22 15:00:00', 102), 13, 1);
+insert into dbo.seance (dateDeb_Seance, dateFin_Seance, Id_Cours, Id_Salle) values (CONVERT(DATETIME, '2022-04-22 15:10:00', 102), CONVERT(DATETIME, '2022-04-22 17:30:00', 102), 11, 1);
 GO
 
-insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 3, 1, 4);
-insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 5, 1, 5);
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 2, 1, 4); -- Francais
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 3, 1, 4); -- Anglais
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 5, 1, 5); -- Management
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 1, 1, 5); -- Mathématiques
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 4, 1, 4); -- Histoire
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 6, 1, 5); -- Economie entreprise
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 7, 1, 4); -- Droit général
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 8, 1, 5); -- Economie générale
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 9, 1, 4); -- Droit informatique
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 10, 1, 5); -- Gestion comptable
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 11, 1, 4); -- Communication
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 12, 1, 5); -- SISR
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 13, 1, 4); -- Algorithmie
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 14, 1, 4); -- Projet professionnel
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 15, 1, 4); -- Mathématiques appliquées
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 16, 1, 4); -- Allemand
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 17, 1, 4); -- Espagnol
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 18, 1, 4); -- Italien
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 19, 1, 4); -- Chinois
+insert into dbo.cours (dateDeb, dateFin, Id_Matiere, Id_Promotion, Id_Formateur) values (CONVERT(DATETIME, '2022-04-18 09:30:00', 102), CONVERT(DATETIME, '2022-04-18 11:00:00', 102), 20, 1, 4); -- SLAM
 GO
-
